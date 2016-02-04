@@ -1,0 +1,22 @@
+<div class='container'>
+		<div ng-controller='dim'  ng-class="{homecss:true}">
+			<typedjs strings=texttyping></typedjs>
+		
+		
+			<h1 ng-bind="about"></h1>
+			<span ng-bind="detail"></span>
+			<h1 ng-bind="skills"></h1>
+				<div class="row">	
+					<div class="col-md-3 col-xs-6" ng-repeat="sks in person">
+						<div class="chart" easypiechart options="options" ng-if="(sks.percent)>80?(options.barColor='green'):(options.barColor)" percent=sks.percent>
+							<span class="percent" ng-bind="sks.percent"></span>
+							<p ng-bind="sks.tech"></p>
+						</div>
+					</div>
+
+				
+				
+			</div>
+
+	</div>
+</div>
